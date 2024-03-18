@@ -21,9 +21,7 @@ public class Main {
         Ex_6 ex6 = new Ex_6();
         ex6.invertFile("src\\Ex\\file3.txt");
 
-        Rectangle rectangle = new Rectangle();
-        rectangle.setA(3);
-        rectangle.setB(2);
+        Rectangle rectangle = new Rectangle(3,2);
         int rectangleField = rectangle.calculateArea();
 
         Triangle triangle = new Triangle();
@@ -34,5 +32,13 @@ public class Main {
         Hexagon hexagon = new Hexagon();
         hexagon.setA(5);
         int hexagonField = hexagon.calculateArea();
+
+        Square square = new Square(5);
+        System.out.println(square.calculateArea());
+        square.calculateArea();
+
+        Square square1 = new Square(3);
+        System.out.println(square.calculateDiameter(3));
+        square.calculateDiameter(3);
     }
 }

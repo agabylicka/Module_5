@@ -1,7 +1,12 @@
 package Ex;
 
 public class Rectangle implements Ex_3.GeometricFigure {
+
     private int a, b;
+    public Rectangle(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
     @Override
     public int calculateArea() {
         return a * b;
