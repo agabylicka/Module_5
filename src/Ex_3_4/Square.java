@@ -1,4 +1,4 @@
-package Ex;
+package Ex_3_4;
 
 
 public class Square extends Rectangle {

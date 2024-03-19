@@ -1,7 +1,7 @@
-package Ex;
+package Ex_3_4;
 
 
-public class Triangle implements Ex_3.GeometricFigure {
+public class Triangle implements GeometricFigure {
     private int a, b;
     @Override
     public int calculateArea() {

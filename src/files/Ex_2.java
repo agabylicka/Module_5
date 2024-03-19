@@ -8,7 +8,7 @@ public class Ex_2 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("How would You like to name this file?");
         String name = scanner.nextLine();
-        File file = new File("C:\\tmp\\"+name+".txt");
+        File file = new File("src\\files\\"+name+".txt");
         try {
             boolean created = file.createNewFile();
         } catch (IOException e) {
@@ -26,34 +26,16 @@ public class Ex_2 {
                 stringBuffer.append("\n");
             }
         }
-        FileWriter writer = null;
-        BufferedWriter bufferedWriter = null;
-        try {
-            writer = new FileWriter(file);
-            bufferedWriter = new BufferedWriter(writer);
+        try (FileWriter writer = new FileWriter(file); BufferedWriter bufferedWriter = new BufferedWriter(writer)) {
             bufferedWriter.write(stringBuffer.toString());
+            bufferedWriter.flush();
         } catch (IOException ioException) {
             ioException.printStackTrace();
-        } finally {
-            if (bufferedWriter != null) {
-                try {
-                    bufferedWriter.close();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-            if (writer != null) {
-                try {
-                    writer.close();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
         }
         return true;
     }
     public void readFromFile(String fileName){
-        File file = new File("C:\\tmp\\"+fileName+".txt");
+        File file = new File("src\\files\\"+fileName+".txt");
         FileReader reader = null;
         BufferedReader bufferedReader = null;
         try {

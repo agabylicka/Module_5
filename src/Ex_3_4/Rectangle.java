@@ -1,6 +1,7 @@
-package Ex;
+package Ex_3_4;
 
-public class Rectangle implements Ex_3.GeometricFigure {
+
+public class Rectangle implements GeometricFigure {
 
     private int a, b;
     public Rectangle(int a, int b) {

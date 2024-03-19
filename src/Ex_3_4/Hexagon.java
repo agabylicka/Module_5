@@ -1,7 +1,7 @@
-package Ex;
+package Ex_3_4;
 
 
-public class Hexagon implements Ex_3.GeometricFigure {
+public class Hexagon implements GeometricFigure {
     private int a;
 
 

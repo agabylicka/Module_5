@@ -1,4 +1,8 @@
-import Ex.*;
+import Ex_3_4.Hexagon;
+import Ex_3_4.Rectangle;
+import Ex_3_4.Square;
+import Ex_3_4.Triangle;
+import Ex_6_7.Ex_6;
 import files.Ex_2;
 import files.PrintDirectory;
 
@@ -8,7 +12,7 @@ public class Main {
         ex2.writeUserInputToFile();
 
         PrintDirectory printDirectory = new PrintDirectory();
-        printDirectory.printDirectory("C:\\tmp");
+        printDirectory.printDirectory("src\\files");
 
         Ex_5 ex5 = new Ex_5();
         boolean comparison = ex5.areTextFilesEqual("src\\resources\\file1.txt", "src\\resources\\file2.txt");
@@ -19,7 +23,7 @@ public class Main {
         }
 
         Ex_6 ex6 = new Ex_6();
-        ex6.invertFile("src\\Ex\\file3.txt");
+        ex6.invertFile("src\\Ex_6_7\\file3.txt");
 
         Rectangle rectangle = new Rectangle(3,2);
         int rectangleField = rectangle.calculateArea();
