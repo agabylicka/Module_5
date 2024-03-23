@@ -8,7 +8,7 @@ import files.PrintDirectory;
 
 public class Main {
     public static void main(String[] args) {
-        Ex_2 ex2 = new Ex_2();
+        /*Ex_2 ex2 = new Ex_2();
         ex2.writeUserInputToFile();
 
         PrintDirectory printDirectory = new PrintDirectory();
@@ -20,12 +20,12 @@ public class Main {
             System.out.println("Files are equal.");
         } else {
             System.out.println("Files are not equal.");
-        }
+        } */
 
         Ex_6 ex6 = new Ex_6();
         ex6.invertFile("src\\Ex_6_7\\file3.txt");
 
-        Rectangle rectangle = new Rectangle(3,2);
+        /*Rectangle rectangle = new Rectangle(3,2);
         int rectangleField = rectangle.calculateArea();
 
         Triangle triangle = new Triangle();
@@ -43,6 +43,6 @@ public class Main {
 
         Square square1 = new Square(3);
         System.out.println(square.calculateDiameter(3));
-        square.calculateDiameter(3);
+        square.calculateDiameter(3); */
     }
 }
