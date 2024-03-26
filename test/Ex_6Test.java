@@ -5,8 +5,7 @@ import java.io.*;
 
 
 public class Ex_6Test {
-    //given
-    Ex_6 ex6 = new Ex_6();
+    private Ex_6 ex6 = new Ex_6();
 
     @Test
     public void testInvertFileWithSuccess() {
@@ -41,5 +40,38 @@ public class Ex_6Test {
         boolean actual = ex6.invertFile("test_res\\testnotexisting.txt");
         //then
         Assertions.assertFalse(actual);
+    }
+
+    @Test
+    public void testAreTextFilesNotEqual() {
+        File file = new File("test_res\\test.txt");
+        Assertions.assertNotNull(file);
+        File file_2 = new File("test_res\\test_inverted.txt");
+        Assertions.assertNotNull(file_2);
+
+        String content = "";
+        try (FileReader reader = new FileReader(file); BufferedReader bufferedReader = new BufferedReader(reader)) {
+            StringBuffer text = new StringBuffer();
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                text.append(line);
+            }
+            content = text.toString();
+        } catch (IOException | NullPointerException ioException) {
+            Assertions.assertNull(ioException);
+        }
+
+        String content2 = null;
+        try (FileReader reader2 = new FileReader(file); BufferedReader bufferedReader2 = new BufferedReader(reader2)) {
+            StringBuffer text = new StringBuffer();
+            String line;
+            while ((line = bufferedReader2.readLine()) != null) {
+                text.append(line);
+            }
+            content2 = text.toString();
+        } catch (IOException | NullPointerException ioException) {
+            Assertions.assertNull(ioException);
+        }
+        Assertions.assertNotEquals("test_res\\test.txt", "test_res\\test_inverted.txt");
     }
 }
