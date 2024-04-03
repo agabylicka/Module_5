@@ -2,7 +2,7 @@ package Ex_3_4;
 
 
 public class Hexagon implements GeometricFigure {
-    private int a;
+    private Integer a;
 
 
     @Override
@@ -14,7 +14,13 @@ public class Hexagon implements GeometricFigure {
         return a;
     }
 
-    public void setA(int a) {
+    public void setA(Integer a) throws Exception {
+        if (a == null) {
+            throw new NullPointerException("Size cannot be null.");
+        }
+        if (a <= 0) {
+            throw new Exception("Size has to be positive.");
+        }
         this.a = a;
     }
 }

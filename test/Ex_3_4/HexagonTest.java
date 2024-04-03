@@ -1,19 +1,17 @@
-import Ex_3_4.Rectangle;
+package Ex_3_4;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class TestRectangle {
-    private Rectangle rectangle = new Rectangle(2,2);
-
+public class HexagonTest {
     @Test
     void calculateArea() {
         //given
-        Rectangle rectangle = new Rectangle(3, 2);
-        int expected = 6;
+        Rectangle rectangle = new Rectangle(3,4);
         //when
         int actual = rectangle.calculateArea();
         //then
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(12,actual);
     }
 
     @Test
@@ -32,24 +30,9 @@ public class TestRectangle {
     }
 
     @Test
-    void calculateAreaWithMinusB() {
-        // given
-        Rectangle rectangle = new Rectangle(3, -4);
-        Exception actual = null;
-        //when
-        try {
-            rectangle.setB(-4);
-        } catch (Exception thrown) {
-            actual = thrown;
-        }
-        //then
-        Assertions.assertNotNull(actual, "There should be an exception, while using negative in setter.");
-    }
-
-    @Test
     void calculateAreaWithZero() {
-        Rectangle rectangle = new Rectangle(0, 4);
         //given
+        Rectangle rectangle = new Rectangle(0, 4);
         int expected = 0;
         //when
         int actual = rectangle.calculateArea();
@@ -65,21 +48,6 @@ public class TestRectangle {
         //when
         try {
             rectangle.setA(null);
-        } catch (Exception thrown) {
-            actual = thrown;
-        }
-        //then
-        Assertions.assertNotNull(actual, "There should be an exception, while using null in setter.");
-    }
-
-    @Test
-    void setBWithNull() {
-        //given
-        Rectangle rectangle = new Rectangle(5,null);
-        Exception actual = null;
-        //when
-        try {
-            rectangle.setB(null);
         } catch (Exception thrown) {
             actual = thrown;
         }

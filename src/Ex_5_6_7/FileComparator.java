@@ -1,9 +1,11 @@
+package Ex_5_6_7;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Ex_5 {
+public class FileComparator {
     public boolean areTextFilesEqual(String filePath1, String filePath2) {
         File file = new File(filePath1);
         if (file.exists() == false) {
@@ -31,7 +33,7 @@ public class Ex_5 {
         }
 
         String content2 = null;
-        try (FileReader reader2 = new FileReader(file); BufferedReader bufferedReader2 = new BufferedReader(reader2)) {
+        try (FileReader reader2 = new FileReader(file_2); BufferedReader bufferedReader2 = new BufferedReader(reader2)) {
             StringBuffer text = new StringBuffer();
             String line;
             while ((line = bufferedReader2.readLine()) != null) {
@@ -43,6 +45,7 @@ public class Ex_5 {
         } catch (NullPointerException nullPointerException) {
             nullPointerException.printStackTrace();
         }
+        System.out.println(content + content2);
         return content.equals(content2);
     }
 }

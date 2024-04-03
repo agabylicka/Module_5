@@ -1,11 +1,11 @@
-package Ex_6_7;
+package Ex_5_6_7;
 
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Ex_6 {
+public class FileInverter {
     public boolean invertFile(String filepath) {
         boolean rtn = false;
         File file = new File(filepath);

@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class Ex_2 {
+public class ChooseFileName {
     public boolean writeUserInputToFile() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("How would You like to name this file?");

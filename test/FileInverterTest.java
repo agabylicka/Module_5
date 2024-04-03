@@ -1,11 +1,12 @@
-import Ex_6_7.Ex_6;
+import Ex_5_6_7.FileComparator;
+import Ex_5_6_7.FileInverter;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.io.*;
 
 
-public class Ex_6Test {
-    private Ex_6 ex6 = new Ex_6();
+public class FileInverterTest {
+    private FileInverter ex6 = new FileInverter();
 
     @Test
     public void testInvertFileWithSuccess() {
@@ -48,30 +49,8 @@ public class Ex_6Test {
         Assertions.assertNotNull(file);
         File file_2 = new File("test_res\\test_inverted.txt");
         Assertions.assertNotNull(file_2);
-
-        String content = "";
-        try (FileReader reader = new FileReader(file); BufferedReader bufferedReader = new BufferedReader(reader)) {
-            StringBuffer text = new StringBuffer();
-            String line;
-            while ((line = bufferedReader.readLine()) != null) {
-                text.append(line);
-            }
-            content = text.toString();
-        } catch (IOException | NullPointerException ioException) {
-            Assertions.assertNull(ioException);
-        }
-
-        String content2 = null;
-        try (FileReader reader2 = new FileReader(file); BufferedReader bufferedReader2 = new BufferedReader(reader2)) {
-            StringBuffer text = new StringBuffer();
-            String line;
-            while ((line = bufferedReader2.readLine()) != null) {
-                text.append(line);
-            }
-            content2 = text.toString();
-        } catch (IOException | NullPointerException ioException) {
-            Assertions.assertNull(ioException);
-        }
-        Assertions.assertNotEquals("test_res\\test.txt", "test_res\\test_inverted.txt");
+        FileComparator ex5 = new FileComparator();
+        boolean areFilesEqual = ex5.areTextFilesEqual("test_res\\test.txt","test_res\\test_inverted.txt");
+        Assertions.assertFalse(areFilesEqual);
     }
 }
