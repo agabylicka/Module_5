@@ -1,3 +1,5 @@
+package Ex_3_4;
+
 import Ex_3_4.Rectangle;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

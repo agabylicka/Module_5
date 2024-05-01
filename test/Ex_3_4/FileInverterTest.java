@@ -1,3 +1,5 @@
+package Ex_3_4;
+
 import Ex_5_6_7.FileComparator;
 import Ex_5_6_7.FileInverter;
 import org.junit.jupiter.api.Assertions;
