@@ -3,9 +3,9 @@ package Ex_3_4;
 
 public class Triangle implements GeometricFigure {
 
-    private Integer a, b;
+    private int a, b;
 
-    public Triangle(Integer a, Integer b) {
+    public Triangle(int a, int b) {
         this.a = a;
         this.b = b;
     }
@@ -23,20 +23,14 @@ public class Triangle implements GeometricFigure {
         return b;
     }
 
-    public void setA(Integer a) throws Exception {
-        if (a == null) {
-            throw new NullPointerException("Size cannot be null.");
-        }
+    public void setA(int a) throws Exception {
         if (a <= 0) {
             throw new Exception("Size has to be positive.");
         }
         this.a = a;
     }
 
-    public void setB(Integer b) throws Exception {
-        if (b == null) {
-            throw new NullPointerException("Size cannot be null.");
-        }
+    public void setB(int b) throws Exception {
         if (b <= 0) {
             throw new Exception("Size has to be positive.");
         }

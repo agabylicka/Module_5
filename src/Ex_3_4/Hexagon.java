@@ -14,10 +14,7 @@ public class Hexagon implements GeometricFigure {
         return a;
     }
 
-    public void setA(Integer a) throws Exception {
-        if (a == null) {
-            throw new NullPointerException("Size cannot be null.");
-        }
+    public void setA(int a) throws Exception {
         if (a <= 0) {
             throw new Exception("Size has to be positive.");
         }

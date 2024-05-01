@@ -57,33 +57,4 @@ public class TestRectangle {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    void setAWithNull() {
-        //given
-        Rectangle rectangle = new Rectangle(null, 4);
-        Exception actual = null;
-        //when
-        try {
-            rectangle.setA(null);
-        } catch (Exception thrown) {
-            actual = thrown;
-        }
-        //then
-        Assertions.assertNotNull(actual, "There should be an exception, while using null in setter.");
-    }
-
-    @Test
-    void setBWithNull() {
-        //given
-        Rectangle rectangle = new Rectangle(5,null);
-        Exception actual = null;
-        //when
-        try {
-            rectangle.setB(null);
-        } catch (Exception thrown) {
-            actual = thrown;
-        }
-        //then
-        Assertions.assertNotNull(actual, "There should be an exception, while using null in setter.");
-    }
 }

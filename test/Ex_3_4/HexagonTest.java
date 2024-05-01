@@ -40,18 +40,4 @@ public class HexagonTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    void setAWithNull() {
-        //given
-        Rectangle rectangle = new Rectangle(null, 4);
-        Exception actual = null;
-        //when
-        try {
-            rectangle.setA(null);
-        } catch (Exception thrown) {
-            actual = thrown;
-        }
-        //then
-        Assertions.assertNotNull(actual, "There should be an exception, while using null in setter.");
-    }
 }
